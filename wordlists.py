@@ -1,0 +1,141 @@
+#2 lists, 1 easy (fruits), 1 hard (capitals).  I felt a category to give a player an idea of what type of word to guess was better than just a completely random word.  1 word will be randomly selected from the list and then removed from the list so it can't be reused again.
+
+import random
+
+fruits = [
+    'Apple',
+    'Apricot',
+    'Avocado',
+    'Banana',
+    'Blueberry',
+    'Blueberry',
+    'Breadfruit',
+    'Cherry',
+    'Coconut',
+    'Durian',
+    'Fig',
+    'Grape',
+    'Grapefruit',
+    'Guava',
+    'Jackfruit',
+    'Kiwi',
+    'Kumquat',
+    'Langsat',
+    'Lemon',
+    'Lime',
+    'Mandarin',
+    'Mango',
+    'Melon',
+    'Nectarine',
+    'Orange',
+    'Papaya',
+    'Peach',
+    'Pear',
+    'Pineapple',
+    'Plum',
+    'Pomegranate',
+    'Pomelo',
+    'Pulasan',
+    'Rambutan',
+    'Raspberry',
+    'Santol',
+    'Starfruit',
+    'Strawberry',
+    'Watermelon',
+]
+#commented out cities with spaces in their names because I couldn't figure out how to get space passed as a valid input from the player
+capitals = [
+    'Phoenix',
+    # 'Little Rock',
+    'Sacramento',
+    'Denver',
+    'Hartford',
+    'Dover',
+    'Honolulu',
+    'Tallahassee',
+    'Atlanta',
+    'Boise',
+    'Springfield',
+    'Indianapolis',
+    # 'Des Moines',
+    'Topeka',
+    'Frankfort',
+    # 'Baton Rouge',
+    'Augusta',
+    'Annapolis',
+    'Boston',
+    'Lansing',
+    'St. Paul',
+    'Jackson',
+    # 'Jefferson City',
+    'Helena',
+    'Lincoln',
+    # 'Carson City',
+    'Concord',
+    'Trenton',
+    'Santa Fe',
+    'Raleigh',
+    'Bismarck',
+    'Albany',
+    'Columbus',
+    # 'Oklahoma City',
+    'Salem',
+    'Harrisburg',
+    'Providence',
+    'Columbia',
+    'Pierre',
+    'Nashville',
+    'Austin',
+    # 'Salt Lake City',
+    'Montpelier',
+    'Richmond',
+    'Olympia',
+    'Charleston',
+    'Madison',
+    'Cheyenne',
+]
+#removed spaces and special characters from movie list
+movies = [
+    "ToyStory",
+    "ABugsLife",
+    "ToyStory2",
+    "MonstersInc",
+    "FindingNemo",
+    "TheIncredibles" ,
+    "Cars",
+    "Ratatouille",
+    "WALL-E",
+    "Up",
+    "ToyStory3",
+    "Cars2",
+    "Brave",
+    "MonstersUniversity",
+    "InsideOut",
+    "TheGoodDinosaur",
+    "FindingDory",
+    "Cars3",
+    "Coco",
+    "Incredibles2",
+    "ToyStory4",
+    "Onward",
+    "Soul",
+    "Luca",
+    "TurningRed",
+    "Lightyear",
+    "Elemental",
+]
+
+def get_movies():
+  movie = random.choice(movies)
+  movies.remove(movie)
+  return movie
+
+def get_capitals():
+    capital = random.choice(capitals)
+    capitals.remove(capital)
+    return capital
+
+def get_fruits():
+    fruit = random.choice(fruits)
+    fruits.remove(fruit)
+    return fruit
