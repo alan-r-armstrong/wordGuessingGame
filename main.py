@@ -5,7 +5,8 @@
 
 #import colorama for some color output
 
-import streamlit as st
+import sys
+from streamlit.web import cli as stcli
 import wordlists
 import colorama
 from colorama import Fore
@@ -134,5 +135,6 @@ def main():
           print('Thanks for playing, your score is Wins: {wins} losses: {loss}'.format(wins=scoreboard["wins"], loss=scoreboard["losses"]))
           break
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    sys.argv = ["streamlit", "run", "main.py"]
+    sys.exit(stcli.main())
