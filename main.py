@@ -5,6 +5,7 @@
 
 #import colorama for some color output
 
+import streamlit as st
 import wordlists
 import colorama
 from colorama import Fore
